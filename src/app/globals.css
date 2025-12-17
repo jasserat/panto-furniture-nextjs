@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@variant dark (&:is(.dark, .dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-primary: #E58411;
+  --color-secondary: #1E1E1E;
+  --color-secondary-bg: #F7F7F7;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom utility classes */
+@layer utilities {
+  .section-container {
+    @apply max-w-screen-2xl container mx-auto py-6 px-4;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  @apply transition-colors duration-300;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+/* Ensure all buttons show pointer cursor */
+button,
+a,
+[role="button"] {
+  cursor: pointer;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  padding: 1rem !important;
+  border-radius: 9999px !important;
+  background-color: white !important;
+  color: black !important;
+  font-size: 1.125rem !important;
+  border: 1px solid #E58411 !important;
+}
+
+.swiper-button-prev:hover:after,
+.swiper-button-next:hover:after {
+  background-color: #E58411 !important;
+  color: white !important;
 }
