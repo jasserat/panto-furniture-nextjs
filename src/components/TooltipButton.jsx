@@ -1,6 +1,8 @@
 'use client'
 
-const TooltipButton = ({ position = 'bottom', colors = ['bg-red-700', 'bg-green-700', 'bg-blue-700'] }) => {
+import { FaCheck } from 'react-icons/fa';
+
+const TooltipButton = ({ position = 'bottom', colors = ['bg-red-700', 'bg-green-700', 'bg-blue-700'], checkedIndex = null }) => {
   // Map position prop to different classes for positioning the tooltip and arrow
   const positionClasses = {
     bottom: {
@@ -26,13 +28,17 @@ const TooltipButton = ({ position = 'bottom', colors = ['bg-red-700', 'bg-green-
       <button className='relative p-4 bg-white/25 border border-1 border-white text-white text-xl rounded-full'>
         {/* Tooltip */}
         <div
-          className={`hidden absolute p-2 space-x-1 rounded-lg bg-white/25 border border-white shadow-md group-hover:flex ${positionClasses[position].tooltip}`}
+          className={`hidden absolute px-3 py-2 gap-2 rounded-full bg-white/25 border border-white shadow-md group-hover:flex items-center ${positionClasses[position].tooltip}`}
         >
           {/* Colored dots */}
           {colors.map((color, index) => (
-            <div key={index} className={`size-6 ${color} border border-white rounded-full`}></div>
+            <div key={index} className={`size-6 ${color} border border-white rounded-full relative flex items-center justify-center`}>
+              {checkedIndex === index && (
+                <FaCheck className="text-white text-xs" />
+              )}
+            </div>
           ))}
-          {/* Tooltip arrow */}
+          {/* Tooltip arrow - rounded */}
           <div
             className={`absolute w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 ${positionClasses[position].arrow} border-1 border-t-white/35`}
           ></div>

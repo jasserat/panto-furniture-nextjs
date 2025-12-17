@@ -33,13 +33,25 @@ const Hero = () => {
 
       {/* hover button for displaying box  */}
       <div className='hidden xl:block absolute bottom-40 left-24'>
-        <TooltipButton position="bottom" />
+        <TooltipButton
+          position="bottom"
+          colors={['bg-[#E58411]', 'bg-[#00D6C9]', 'bg-[#7C7C7C]']}
+          checkedIndex={2}
+        />
       </div>
       <div className='hidden xl:block absolute bottom-52 left-96'>
-        <TooltipButton position="bottom" />
+        <TooltipButton
+          position="bottom"
+          colors={['bg-[#E58411]', 'bg-[#00D6C9]', 'bg-[#7C7C7C]']}
+          checkedIndex={0}
+        />
       </div>
       <div className='hidden xl:block absolute bottom-24 right-[820px]'>
-        <TooltipButton position="bottom" />
+        <TooltipButton
+          position="bottom"
+          colors={['bg-[#E58411]', 'bg-[#00D6C9]', 'bg-[#7C7C7C]']}
+          checkedIndex={1}
+        />
       </div>
 
       {/* dark and light mode */}
