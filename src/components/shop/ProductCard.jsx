@@ -10,20 +10,20 @@ const ProductCard = ({ product }) => {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div key={product.id} className="">
-      <div className='bg-[#FAFAFA]'>
+    <div key={product.id} className="w-[268.09px] h-[492px] flex flex-col rounded-2xl overflow-hidden shadow-sm">
+      <div className='bg-[#FAFAFA] h-[312px] flex items-center justify-center p-8'>
         <img
           src={getImgUrl(`${product.imageUrl}`)}
           alt={product.name}
-          className="w-full h-full object-cover px-8 py-2 rounded"
+          className="w-full h-full object-contain"
         />
       </div>
 
-      <div className={`p-6 dark:bg-black bg-white shadow-sm`}>
+      <div className={`p-6 dark:bg-black bg-white flex-1 flex flex-col`}>
         <h4 className='text-base mb-1'>{product.category}</h4>
         <h3 className="font-semibold text-xl mb-2">{product.name}</h3>
         <Rating rating={product.rating} />
-        <div className='mt-5 flex justify-between items-center'>
+        <div className='mt-auto flex justify-between items-center'>
           <p className="text-secondary dark:text-white font-bold text-lg"><sup>$</sup> <span className=''>{product.price}</span></p>
           <button className='bg-secondary p-2 rounded-full text-white'
             onClick={() => addToCart(product)}

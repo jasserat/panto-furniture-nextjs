@@ -2,48 +2,80 @@ export const products = [
   // Chairs
   {
     id: 1,
-    name: "Comfortable Chair",
+    name: "Sakarias Armchair",
     category: "Chair",
-    price: 99,
+    price: 392,
     imageUrl: "chair-1.png",
     rating: 5,
   },
   {
     id: 2,
-    name: "Ergonomic Chair",
+    name: "Baltsar Chair",
     category: "Chair",
-    price: 129,
+    price: 299,
     imageUrl: "chair-2.png",
-    rating: 4,
+    rating: 5,
   },
   {
     id: 3,
-    name: "Stylish Armchair",
+    name: "Anjay Armchair",
     category: "Chair",
-    price: 149,
+    price: 519,
     imageUrl: "chair-3.png",
-    rating: 3,
+    rating: 5,
   },
   {
     id: 4,
-    name: "Leather Recliner",
+    name: "Nyantuy Chair",
     category: "Chair",
-    price: 199,
+    price: 921,
     imageUrl: "chair-4.png",
-    rating: 4,
+    rating: 5,
   },
   {
     id: 5,
+    name: "Comfortable Chair",
+    category: "Chair",
+    price: 99,
+    imageUrl: "chair-5.png",
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: "Ergonomic Chair",
+    category: "Chair",
+    price: 129,
+    imageUrl: "chair-6.png",
+    rating: 4,
+  },
+  {
+    id: 7,
+    name: "Stylish Armchair",
+    category: "Chair",
+    price: 149,
+    imageUrl: "chair-7.png",
+    rating: 3,
+  },
+  {
+    id: 8,
+    name: "Leather Recliner",
+    category: "Chair",
+    price: 199,
+    imageUrl: "chair-8.png",
+    rating: 4,
+  },
+  {
+    id: 9,
     name: "Minimalist Chair",
     category: "Chair",
     price: 89,
-    imageUrl: "chair-5.png",
+    imageUrl: "chair-9.png",
     rating: 4.5,
   },
 
   // Beds
   {
-    id: 6,
+    id: 10,
     name: "King Size Bed",
     category: "Beds",
     price: 299,
@@ -51,7 +83,7 @@ export const products = [
     rating: 5,
   },
   {
-    id: 7,
+    id: 11,
     name: "Queen Size Bed",
     category: "Beds",
     price: 249,
@@ -59,7 +91,7 @@ export const products = [
     rating: 5,
   },
   {
-    id: 8,
+    id: 12,
     name: "Modern Bed Frame",
     category: "Beds",
     price: 399,
@@ -67,7 +99,7 @@ export const products = [
     rating: 3,
   },
   {
-    id: 9,
+    id: 13,
     name: "Platform Bed",
     category: "Beds",
     price: 349,
@@ -75,7 +107,7 @@ export const products = [
     rating: 2,
   },
   {
-    id: 10,
+    id: 14,
     name: "Sleigh Bed",
     category: "Beds",
     price: 459,
@@ -85,7 +117,7 @@ export const products = [
 
   // Sofas
   {
-    id: 11,
+    id: 15,
     name: "Luxury Sofa",
     category: "Sofa",
     price: 499,
@@ -93,7 +125,7 @@ export const products = [
     rating: 4,
   },
   {
-    id: 12,
+    id: 16,
     name: "Compact Sofa",
     category: "Sofa",
     price: 399,
@@ -101,7 +133,7 @@ export const products = [
     rating: 5,
   },
   {
-    id: 13,
+    id: 17,
     name: "L-shaped Sofa",
     category: "Sofa",
     price: 699,
@@ -109,7 +141,7 @@ export const products = [
     rating: 4,
   },
   {
-    id: 14,
+    id: 18,
     name: "Sofa with Chaise",
     category: "Sofa",
     price: 549,
@@ -117,7 +149,7 @@ export const products = [
     rating: 5,
   },
   {
-    id: 15,
+    id: 19,
     name: "Sectional Sofa",
     category: "Sofa",
     price: 799,
@@ -127,7 +159,7 @@ export const products = [
 
   // Lamps
   {
-    id: 16,
+    id: 20,
     name: "Modern Lamp",
     category: "Lamp",
     price: 49,
@@ -135,7 +167,7 @@ export const products = [
     rating: 5,
   },
   {
-    id: 17,
+    id: 21,
     name: "Classic Lamp",
     category: "Lamp",
     price: 59,
@@ -143,7 +175,7 @@ export const products = [
     rating: 4,
   },
   {
-    id: 18,
+    id: 22,
     name: "Wooden Table Lamp",
     category: "Lamp",
     price: 69,
@@ -151,7 +183,7 @@ export const products = [
     rating: 3,
   },
   {
-    id: 19,
+    id: 23,
     name: "Industrial Floor Lamp",
     category: "Lamp",
     price: 89,
@@ -159,7 +191,7 @@ export const products = [
     rating: 5,
   },
   {
-    id: 20,
+    id: 24,
     name: "Vintage Desk Lamp",
     category: "Lamp",
     price: 79,
