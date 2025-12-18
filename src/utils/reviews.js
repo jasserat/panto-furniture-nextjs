@@ -1,6 +1,31 @@
 export const reviews = [
   {
+    name: 'Bang Upin',
+    role: 'Pedagang Asongan',
+    review: 'Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal',
+    image: '/images/reviewer1.png',
+    coverImg: '/images/testimonial1.png',
+    rating: 4,
+  },
+  {
+    name: 'Ibuk Sukijan',
+    role: 'Ibu Rumah Tangga',
+    review: 'Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang terlihat mewah',
+    image: '/images/reviewer2.png',
+    coverImg: '/images/testimonial2.png',
+    rating: 4,
+  },
+  {
+    name: 'Mpok Ina',
+    role: 'Guru TK',
+    review: 'Sangat terjangkau untuk kantong saya yang tidak terlalu banyak',
+    image: '/images/reviewer3.png',
+    coverImg: '/images/testimonial3.png',
+    rating: 4,
+  },
+  {
     name: 'John Doe',
+    role: 'Pedagang Asongan',
     review: 'Panto made my room feel more alive and minimalist. Highly recommend!',
     image: '/images/reviewer1.png',
     coverImg: '/images/testimonial1.png',
@@ -8,6 +33,7 @@ export const reviews = [
   },
   {
     name: 'Jane Smith',
+    role: 'Ibu Rumah Tangga',
     review: 'Great designs and superb service! I love my new living space.',
     image: '/images/reviewer2.png',
     coverImg: '/images/testimonial2.png',
@@ -15,6 +41,7 @@ export const reviews = [
   },
   {
     name: 'Michael Brown',
+    role: 'Guru TK',
     review: 'Very easy to work with. Turned my home into a cozy, modern sanctuary!',
     image: '/images/reviewer3.png',
     coverImg: '/images/testimonial3.png',
@@ -22,6 +49,7 @@ export const reviews = [
   },
   {
     name: 'Emma Wilson',
+    role: 'Pedagang Asongan',
     review: 'Amazing furniture quality! My home looks and feels premium.',
     image: '/images/reviewer1.png',
     coverImg: '/images/testimonial1.png',
@@ -29,6 +57,7 @@ export const reviews = [
   },
   {
     name: 'Sarah Johnson',
+    role: 'Ibu Rumah Tangga',
     review: 'Perfect customer service and beautiful designs. Very satisfied!',
     image: '/images/reviewer2.png',
     coverImg: '/images/testimonial2.png',
@@ -36,6 +65,7 @@ export const reviews = [
   },
   {
     name: 'David Lee',
+    role: 'Guru TK',
     review: 'Transformed my living space completely. Worth every penny!',
     image: '/images/reviewer3.png',
     coverImg: '/images/testimonial3.png',
