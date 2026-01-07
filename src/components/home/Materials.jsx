@@ -2,7 +2,7 @@ import Button from '@/components/Button'
 
 const Materials = () => {
   return (
-    <section className='my-24 section-container flex flex-col md:flex-row items-center justify-between md:gap-20 gap-8'>
+    <section className='my-24 mb-32 section-container flex flex-col md:flex-row items-center justify-between md:gap-20 gap-8'>
       <div className='md:w-1/2 mx-auto'>
         <h3 className='text-lg font-gilroy font-semibold text-primary mb-4'>MATERIALS</h3>
         <h2 className='text-4xl font-gilroy font-bold mb-4 capitalize lg:w-1/2'>Very Serious Saterials For Making Furniture</h2>
