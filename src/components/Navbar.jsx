@@ -61,7 +61,7 @@ const Navbar = () => {
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition duration-300 ease-in-out ${isScrolled ? 'bg-white shadow-md text-black' : 'bg-transparent text-white'}`}>
       <nav className="max-w-screen-2xl container mx-auto py-6 px-4 flex justify-between items-center">
-        <Link href="/" className="font-bold">Panto</Link>
+        <Link href="/" className="font-gilroy font-bold relative right-24 text-3xl">Panto</Link>
 
         {/* Hamburger Icon for Mobile */}
         <div className="md:hidden text-xl cursor-pointer" onClick={toggleMenu}>
@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav Items */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex font-gilroy font-medium text-xl">
           <NavItems />
         </div>
 
@@ -81,9 +81,9 @@ const Navbar = () => {
           <NavItems toggleMenu={toggleMenu} />
         </div>
 
-        <div className="hidden md:block relative cursor-pointer">
-          <FaShoppingBag className="text-xl" />
-          <sup className="absolute top-0 -right-3 bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+        <div className="hidden md:block relative cursor-pointer left-24">
+          <FaShoppingBag style={{ width: '34px', height: '34px' }} />
+          <sup className="absolute top-0 -right-3 bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs" style={{ width: '20px', height: '25.24px' }}>
             {cartCount}
           </sup>
         </div>
