@@ -58,11 +58,11 @@ const Products = ({ headline }) => {
     <div className={`${isDarkMode ? 'bg-gray-900 text-white' : 'bg-secondary-bg'}`}>
       <div className="section-container">
         {/* Headline */}
-        <h2 className="text-4xl font-bold text-center my-8 ">{headline}</h2>
+        <h2 className="text-5xl font-gilroy font-bold text-center my-8 ">{headline}</h2>
 
         {/* Category Tabs */}
         <div className="bg-[#EEEEEE] max-w-md mx-auto sm:rounded-full md:p-2.5 py-5 mb-16">
-          <div className="flex flex-col sm:flex-row items-center md:justify-between justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center md:justify-between justify-center gap-4 font-gilroy font-regular">
             {categories.map((category) => (
               <button
                 key={category}
@@ -120,7 +120,7 @@ const Products = ({ headline }) => {
           <div className="flex justify-center items-center mt-8">
             <button
               onClick={loadMoreProducts}
-              className="text-primary font-bold flex items-center px-4 py-2 rounded-full hover:text-white gap-1 hover:bg-secondary transition-colors"
+              className="text-primary font-gilroy font-medium flex items-center px-4 py-2 rounded-full hover:text-white gap-1 hover:bg-secondary transition-colors"
             >
               View More
               <img src="/images/button-icon.png" alt="" />

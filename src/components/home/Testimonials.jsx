@@ -13,9 +13,9 @@ const Testimonials = () => {
   return (
     <div className="section-container px-8">
       {/* Subheading and Heading */}
-      <div className="text-center mb-12">
-        <p className="text-primary uppercase tracking-wide">Testimonials</p>
-        <h2 className="text-4xl font-bold">What Our Clients Say</h2>
+      <div className="text-center mb-15">
+        <p className="text-primary font-gilroy font-semibold uppercase tracking-wide mb-4">TESTIMONIALS</p>
+        <h2 className="text-4xl font-gilroy font-bold">Our Clients Reviews</h2>
       </div>
 
       <div className="relative mx-auto max-w-fit max-h-5/6 overflow-visible">

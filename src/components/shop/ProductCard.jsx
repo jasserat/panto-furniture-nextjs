@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className={`p-6 dark:bg-black bg-white flex-1 flex flex-col`}>
-        <h4 className='text-base mb-1'>{product.category}</h4>
+        <h4 className='text-base text-gray-400 mb-1'>{product.category}</h4>
         <h3 className="font-semibold text-xl mb-2">{product.name}</h3>
         <Rating rating={product.rating} />
         <div className='mt-auto flex justify-between items-center'>
