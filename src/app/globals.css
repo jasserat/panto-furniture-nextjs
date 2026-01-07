@@ -8,6 +8,7 @@
   --color-secondary-bg: #F7F7F7;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-gilroy: var(--font-gilroy);
 }
 
 /* Custom utility classes */

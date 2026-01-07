@@ -12,17 +12,17 @@ const Hero = () => {
   return (
     <section className={`relative h-screen bg-cover bg-center text-white`} style={{ backgroundImage: `url(/images/banner.png)` }}>
       <div className='relative md:pt-48 pt-28 px-4 text-center md:w-1/2 mx-auto space-y-8'>
-        <h1 className="text-4xl lg:text-6xl lg:leading-tight leading-snug font-medium">Make your interior more Minimalistic & modern</h1>
-        <p className='text-xl lg:w-1/2 mx-auto '>Turn your room with panto into a lot more minimalist and modern with ease and speed</p>
+        <h1 className="text-4xl lg:text-6xl lg:leading-tight leading-snug font-gilroy font-bold">Make Your Interior More Minimalistic & Modern</h1>
+        <p className='text-xl lg:w-11/20 mx-auto font-gilroy font-Regular'>Turn your room with panto into a lot more minimalist and modern with ease and speed</p>
 
         {/* Search field with input and icon */}
         <div className="relative inline-block z-30">
           <input
             type="text"
             placeholder="Search furniture"
-            className="w-full md:w-80 px-6 py-2  bg-white/25 rounded-full border border-gray-300 text-white focus:outline-none"
+            className="w-full md:w-80 px-6 py-2 font-gilroy font-regular bg-white/25 rounded-full border border-gray-300 text-white focus:outline-none"
           />
-          <div className='absolute right-3 top-1/2 transform -translate-y-1/2 p-2 bg-primary rounded-full cursor-pointer'>
+          <div className='absolute right-1.5 top-1/2 transform -translate-y-1/2 p-2 bg-primary rounded-full cursor-pointer'>
             <FaSearch className="text-white " />
           </div>
         </div>
