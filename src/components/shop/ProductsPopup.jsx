@@ -9,18 +9,20 @@ import { ThemeContext } from '@/context/ThemeContext';
 import PopupProductCard from './PopupProductCard';
 
 const PRODUCTS_PER_PAGE = 8;
+const categories = ['All', 'Chair', 'Beds', 'Sofa', 'Lamp'];
 
 const ProductsPopup = ({ isOpen, onClose }) => {
   const { isDarkMode } = useContext(ThemeContext);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('name'); // 'name' or 'price'
   const [sortOrder, setSortOrder] = useState('asc'); // 'asc' or 'desc'
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Reset page when search or sort changes
+  // Reset page when search, category or sort changes
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, sortBy, sortOrder]);
+  }, [searchQuery, selectedCategory, sortBy, sortOrder]);
 
   // Close on escape key
   useEffect(() => {
@@ -45,6 +47,11 @@ const ProductsPopup = ({ isOpen, onClose }) => {
   const filteredAndSortedProducts = useMemo(() => {
     let result = [...products];
 
+    // Filter by category
+    if (selectedCategory !== 'All') {
+      result = result.filter((product) => product.category === selectedCategory);
+    }
+
     // Filter by search query
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
@@ -68,7 +75,7 @@ const ProductsPopup = ({ isOpen, onClose }) => {
     });
 
     return result;
-  }, [searchQuery, sortBy, sortOrder]);
+  }, [searchQuery, selectedCategory, sortBy, sortOrder]);
 
   // Pagination
   const totalPages = Math.ceil(filteredAndSortedProducts.length / PRODUCTS_PER_PAGE);
@@ -168,6 +175,25 @@ const ProductsPopup = ({ isOpen, onClose }) => {
             </div>
           </div>
 
+          {/* Category Filter */}
+          <div className="flex flex-wrap gap-2 mt-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-primary text-white'
+                    : isDarkMode
+                    ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    : 'bg-[#EEEEEE] text-secondary hover:bg-gray-300'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
           {/* Results count */}
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
             Showing {paginatedProducts.length} of {filteredAndSortedProducts.length} products
@@ -175,9 +201,9 @@ const ProductsPopup = ({ isOpen, onClose }) => {
         </div>
 
         {/* Products Grid */}
-        <div className="p-6 overflow-y-auto" style={{ maxHeight: 'calc(90vh - 220px)' }}>
+        <div className="p-6 pb-20 overflow-y-auto" style={{ maxHeight: 'calc(90vh - 220px)' }}>
           {paginatedProducts.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pb-4">
               {paginatedProducts.map((product) => (
                 <PopupProductCard
                   key={product.id}
