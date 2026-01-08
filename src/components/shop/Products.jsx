@@ -96,13 +96,13 @@ const Products = ({ headline }) => {
           </button>
         </div>
 
-        {/* View More Button */}
+        {/* View All Button */}
         <div className="flex justify-center items-center mt-8">
           <button
             onClick={() => setIsPopupOpen(true)}
             className="text-primary font-gilroy font-medium flex items-center px-4 py-2 rounded-full hover:text-white gap-1 hover:bg-secondary transition-colors"
           >
-            View More
+            View All
             <img src="/images/button-icon.png" alt="" />
           </button>
         </div>
