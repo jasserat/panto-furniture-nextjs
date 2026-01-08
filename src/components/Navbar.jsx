@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaBars, FaShoppingBag, FaTimes } from 'react-icons/fa';
 import { CartContext } from '@/context/CartContext';
+import CartPopup from './CartPopup';
 
 // Define an array of nav items
 const navItems = [
@@ -38,6 +39,7 @@ const Navbar = () => {
   const { cartCount } = useContext(CartContext);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,12 +83,15 @@ const Navbar = () => {
           <NavItems toggleMenu={toggleMenu} />
         </div>
 
-        <div className="hidden md:block relative cursor-pointer left-24">
+        <div className="hidden md:block relative cursor-pointer left-24" onClick={() => setIsCartOpen(true)}>
           <FaShoppingBag style={{ width: '34px', height: '34px' }} />
           <sup className="absolute top-0 -right-3 bg-primary text-white rounded-full w-5 h-5 flex items-center justify-center text-xs" style={{ width: '20px', height: '25.24px' }}>
             {cartCount}
           </sup>
         </div>
+
+        {/* Cart Popup */}
+        <CartPopup isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
       </nav>
     </header>
   );
